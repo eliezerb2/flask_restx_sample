@@ -1,0 +1,154 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Api",
+        "importPath": "flask_restx",
+        "description": "flask_restx",
+        "isExtraImport": true,
+        "detail": "flask_restx",
+        "documentation": {}
+    },
+    {
+        "label": "Resource",
+        "importPath": "flask_restx",
+        "description": "flask_restx",
+        "isExtraImport": true,
+        "detail": "flask_restx",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "flask_restx",
+        "description": "flask_restx",
+        "isExtraImport": true,
+        "detail": "flask_restx",
+        "documentation": {}
+    },
+    {
+        "label": "Api",
+        "importPath": "flask_restx",
+        "description": "flask_restx",
+        "isExtraImport": true,
+        "detail": "flask_restx",
+        "documentation": {}
+    },
+    {
+        "label": "Namespace",
+        "importPath": "flask_restx",
+        "description": "flask_restx",
+        "isExtraImport": true,
+        "detail": "flask_restx",
+        "documentation": {}
+    },
+    {
+        "label": "get_items",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_items():\n    \"\"\"\n    Get all items\n    \"\"\"\n    items = [\n        {'id': 1, 'name': 'Item 1'},\n        {'id': 2, 'name': 'Item 2'}\n    ]\n    return items\napi.init_app(app)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "hello",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def hello():\n    \"\"\"Return hello to the name of the requester\"\"\"\n    # name = request.args.get('name')\n    # if not name:\n    #     return jsonify({\"error\": \"Name parameter is required\"}), 400\n    # return jsonify({\"message\": f\"Hello, {name}!\"})\n    return jsonify({'message': 'Hello, World!'})\nif __name__ == '__main__':\n    app.run(debug=True)\n'''",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\napi = Api(app, version='1.0', title='My API', description='A simple API')\nitem_model = api.model('Item', {\n    'id': fields.Integer(description='The item unique identifier'),\n    'name': fields.String(description='The item name')\n})\n@api.route('/api/items')\n@api.doc(description=\"Get all items\")\n@api.marshal_with(item_model, as_list=True)\ndef get_items():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "api",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "api = Api(app, version='1.0', title='My API', description='A simple API')\nitem_model = api.model('Item', {\n    'id': fields.Integer(description='The item unique identifier'),\n    'name': fields.String(description='The item name')\n})\n@api.route('/api/items')\n@api.doc(description=\"Get all items\")\n@api.marshal_with(item_model, as_list=True)\ndef get_items():\n    \"\"\"",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "item_model",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "item_model = api.model('Item', {\n    'id': fields.Integer(description='The item unique identifier'),\n    'name': fields.String(description='The item name')\n})\n@api.route('/api/items')\n@api.doc(description=\"Get all items\")\n@api.marshal_with(item_model, as_list=True)\ndef get_items():\n    \"\"\"\n    Get all items",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\napi = Api(app)\n# Create a namespace\nns = Namespace('example', description='Example Namespace')\n@api.route('/hello') #, methods=['GET']) # The main route\n@ns.doc(description='Example Hello Endpoint', responses={200: 'OK'})\ndef hello():\n    \"\"\"Return hello to the name of the requester\"\"\"\n    # name = request.args.get('name')\n    # if not name:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "api",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "api = Api(app)\n# Create a namespace\nns = Namespace('example', description='Example Namespace')\n@api.route('/hello') #, methods=['GET']) # The main route\n@ns.doc(description='Example Hello Endpoint', responses={200: 'OK'})\ndef hello():\n    \"\"\"Return hello to the name of the requester\"\"\"\n    # name = request.args.get('name')\n    # if not name:\n    #     return jsonify({\"error\": \"Name parameter is required\"}), 400",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "ns",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "ns = Namespace('example', description='Example Namespace')\n@api.route('/hello') #, methods=['GET']) # The main route\n@ns.doc(description='Example Hello Endpoint', responses={200: 'OK'})\ndef hello():\n    \"\"\"Return hello to the name of the requester\"\"\"\n    # name = request.args.get('name')\n    # if not name:\n    #     return jsonify({\"error\": \"Name parameter is required\"}), 400\n    # return jsonify({\"message\": f\"Hello, {name}!\"})\n    return jsonify({'message': 'Hello, World!'})",
+        "detail": "app",
+        "documentation": {}
+    }
+]
